@@ -2,6 +2,18 @@ package com.custom.informatica.fab.credittrading.batch;
 
 
 import com.jcraft.jsch.*;
+import com.jcraft.jsch.KeyPair;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.security.*;
+import java.security.spec.InvalidKeySpecException;
+import java.security.spec.PKCS8EncodedKeySpec;
+import java.security.spec.X509EncodedKeySpec;
 
 public class SFTPDownload {
     String SFTPHost = "hostIP";
@@ -46,4 +58,25 @@ public class SFTPDownload {
         }
 
     }
+    public static PublicKey getPublicKey(String filename) throws Exception {
+
+            byte[] keyBytes = Files.readAllBytes(Paths.get(filename));
+
+            X509EncodedKeySpec spec =
+                    new X509EncodedKeySpec(keyBytes);
+            KeyFactory kf = KeyFactory.getInstance("RSA");
+            return kf.generatePublic(spec);
+    }
+
+    public static PrivateKey getPrivateKey(String filename) throws Exception {
+
+        byte[] keyBytes = Files.readAllBytes(Paths.get(filename));
+
+        X509EncodedKeySpec spec =
+                new X509EncodedKeySpec(keyBytes);
+        KeyFactory kf = KeyFactory.getInstance("RSA");
+        return kf.generatePrivate(spec);
+    }
+
+
 }
