@@ -72,15 +72,14 @@ public class fileAdvancedOperations {
         }
         System.out.println(mapAsString.toString());
     }
-    try (
-    Writer writer = new FileWriter("fileChecksum.csv")) {
-        for (Map.Entry<String, String> entry : fileChecksumList.entrySet()) {
-            writer.append(entry.getKey())
-                    .append(',')
-                    .append(entry.getValue())
-                    .append(eol);
-        }
-    } catch (IOException ex) {
-        ex.printStackTrace(System.err);
-    }
+//    try(Writer writer = new FileWriter("fileChecksum.csv")) {
+//        for (Map.Entry<String, String> entry : fileChecksumList.entrySet()) {
+//            writer.append(entry.getKey())
+//                    .append(',')
+//                    .append(entry.getValue())
+//                    .append(eol);
+//        }
+//    } catch (IOException ex) {
+//        ex.printStackTrace(System.err);
+//    }
 }

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="org.quickfixj-2.2">
+    <archive path="C:/Suraj/Personal/Workspaces/IntelliJ/extLibraries/org.quickfixj-2.2.0/quickfixj-all-2.2.0.jar" />
+    <archive path="C:/Suraj/Personal/Workspaces/IntelliJ/extLibraries/org.quickfixj-2.2.0/quickfixj-core-2.2.0.jar" />
+    <archive path="C:/Suraj/Personal/Workspaces/IntelliJ/extLibraries/org.quickfixj-2.2.0/org.quickfixj-2.2.0-src.zip" />
+    <archive path="C:/Suraj/Personal/Workspaces/IntelliJ/extLibraries/org.quickfixj-2.2.0/quickfixj-messages-all-2.2.0.jar" />
+    <archive path="C:/Suraj/Personal/Workspaces/IntelliJ/extLibraries/org.quickfixj-2.2.0/quickfixj-codegenerator-2.2.0.jar" />
+    <archive path="C:/Suraj/Personal/Workspaces/IntelliJ/extLibraries/org.quickfixj-2.2.0/quickfixj-dictgenerator-2.2.0.jar" />
+    <archive path="C:/Suraj/Personal/Workspaces/IntelliJ/extLibraries/org.quickfixj-2.2.0/quickfixj-messages-fix40-2.2.0.jar" />
+    <archive path="C:/Suraj/Personal/Workspaces/IntelliJ/extLibraries/org.quickfixj-2.2.0/quickfixj-messages-fix41-2.2.0.jar" />
+    <archive path="C:/Suraj/Personal/Workspaces/IntelliJ/extLibraries/org.quickfixj-2.2.0/quickfixj-messages-fix42-2.2.0.jar" />
+    <archive path="C:/Suraj/Personal/Workspaces/IntelliJ/extLibraries/org.quickfixj-2.2.0/quickfixj-messages-fix43-2.2.0.jar" />
+    <archive path="C:/Suraj/Personal/Workspaces/IntelliJ/extLibraries/org.quickfixj-2.2.0/quickfixj-messages-fix44-2.2.0.jar" />
+    <archive path="C:/Suraj/Personal/Workspaces/IntelliJ/extLibraries/org.quickfixj-2.2.0/quickfixj-messages-fix50-2.2.0.jar" />
+    <archive path="C:/Suraj/Personal/Workspaces/IntelliJ/extLibraries/org.quickfixj-2.2.0/quickfixj-examples-banzai-2.2.0.jar" />
+    <archive path="C:/Suraj/Personal/Workspaces/IntelliJ/extLibraries/org.quickfixj-2.2.0/quickfixj-messages-fixt11-2.2.0.jar" />
+    <archive path="C:/Suraj/Personal/Workspaces/IntelliJ/extLibraries/org.quickfixj-2.2.0/quickfixj-examples-executor-2.2.0.jar" />
+    <archive path="C:/Suraj/Personal/Workspaces/IntelliJ/extLibraries/org.quickfixj-2.2.0/quickfixj-messages-fix50sp1-2.2.0.jar" />
+    <archive path="C:/Suraj/Personal/Workspaces/IntelliJ/extLibraries/org.quickfixj-2.2.0/quickfixj-messages-fix50sp2-2.2.0.jar" />
+    <archive path="C:/Suraj/Personal/Workspaces/IntelliJ/extLibraries/org.quickfixj-2.2.0/quickfixj-examples-ordermatch-2.2.0.jar" />
+  </library>
+  <library name="univocity-parsers-2.8.4">
+    <archive path="C:/Suraj/Personal/Workspaces/IntelliJ/extLibraries/univocity-parsers-2.8.4.jar" />
+    <archive path="C:/Suraj/Personal/Workspaces/IntelliJ/extLibraries/commons-io-2.7-bin.tar/commons-io-2.7-bin/commons-io-2.7/commons-io-2.7.jar" />
+  </library>
+</eclipse-userlibraries>
+

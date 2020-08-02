@@ -13,6 +13,8 @@ import com.univocity.parsers.csv.CsvParserSettings;
 import com.univocity.parsers.fixed.FixedWidthFields;
 import com.univocity.parsers.fixed.FixedWidthParser;
 import com.univocity.parsers.fixed.FixedWidthParserSettings;
+import org.apache.commons.io.*;
+import org.apache.commons.io.filefilter.WildcardFileFilter;
 
 import java.io.*;
 import java.util.*;
@@ -76,8 +78,14 @@ public class fileOperations {
         System.out.println("Number of Fields" + fop.mapFieldCounts(fop.pFoundFileList));
         System.out.println("Map of Line Counts: " + fop.mapLineCounts(fop.pFoundFileList));
         fop.logFileHandler.close();
-        fop.validateRowLength(tfixedWidthMap, "C:\\Suraj\\Personal\\Workspaces\\IntelliJ\\Infa_FAB\\testfiles\\xyz.csv");
+//        fop.validateRowLength(tfixedWidthMap, "C:\\Suraj\\Personal\\Workspaces\\IntelliJ\\Infa_FAB\\testfiles\\xyz.csv");
+        List <String> temptest = new ArrayList<>();
 
+        File[] f = fop.matchFilesByPattern("abc*");
+        for (int i = 0; i < f.length; i++) {
+            System.out.println("The Pattern file is " + f[i]);
+            temptest.add(f[i].toString());
+        }
     }
 
     public void processList(List<String> filenamelist) {
@@ -210,5 +218,15 @@ public class fileOperations {
     public int getNotfoundFileCount() {
         return notfoundFileCount;
     }
+
+    public File[] matchFilesByPattern(String sample){
+        File dir = new File(pfileLocation);
+        FileFilter fileFilter = new WildcardFileFilter(sample);
+        File[] files = dir.listFiles(fileFilter);
+        return files;
+    }
+
+
+
 
 }
