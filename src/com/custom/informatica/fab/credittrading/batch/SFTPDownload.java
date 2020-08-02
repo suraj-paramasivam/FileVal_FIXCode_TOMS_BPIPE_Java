@@ -2,32 +2,28 @@ package com.custom.informatica.fab.credittrading.batch;
 
 
 import com.jcraft.jsch.*;
-import com.jcraft.jsch.KeyPair;
+import org.apache.commons.io.FileUtils;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import javax.crypto.Cipher;
+import java.io.*;
 import java.security.*;
-import java.security.spec.InvalidKeySpecException;
 import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
 
 public class SFTPDownload {
-    String SFTPHost = "hostIP";
+    String SFTPHost = "test.rebex.net";
     int port = 22;
-    String username="test";
-    String password="test";
+    String username="demo";
+    String password="password";
     String transferToDirectory = "/tmp";
     Session session = null;
 
     //Connection to Host
-    public void connect() throws JSchException{
+    public void connect() throws Exception {
         JSch jsch = new JSch();
         session = jsch.getSession(username,SFTPHost,port);
-        session.setPassword(password);
+        String passwordExtract = decryptPassword("passwordFile","test");
+        session.setPassword(passwordExtract);
         session.setConfig("StrictHostKeyChecking","no");
         session.connect();
     }
@@ -52,6 +48,9 @@ public class SFTPDownload {
         SFTPDownload sftp = new SFTPDownload();
         try{
             sftp.connect();
+            sftp.download("/pub/example/readme.txt",".");
+            System.out.println("Download Completed");
+            sftp.disconnect();
         }
         catch(Exception e){
             e.printStackTrace();
@@ -60,23 +59,38 @@ public class SFTPDownload {
     }
     public static PublicKey getPublicKey(String filename) throws Exception {
 
-            byte[] keyBytes = Files.readAllBytes(Paths.get(filename));
-
-            X509EncodedKeySpec spec =
-                    new X509EncodedKeySpec(keyBytes);
-            KeyFactory kf = KeyFactory.getInstance("RSA");
-            return kf.generatePublic(spec);
+        File f1 = new File(filename + "_public.key");
+        FileInputStream fis = new FileInputStream(f1);
+        DataInputStream dis = new DataInputStream(fis);
+        byte[] keyBytes = new byte[(int) f1.length()];
+        dis.readFully(keyBytes);
+        X509EncodedKeySpec spec =
+                new X509EncodedKeySpec(keyBytes);
+        KeyFactory kf = KeyFactory.getInstance("RSA");
+        return kf.generatePublic(spec);
     }
 
     public static PrivateKey getPrivateKey(String filename) throws Exception {
-
-        byte[] keyBytes = Files.readAllBytes(Paths.get(filename));
-
-        X509EncodedKeySpec spec =
-                new X509EncodedKeySpec(keyBytes);
+        File f1 = new File(filename + "_private.key");
+        FileInputStream fis = new FileInputStream(f1);
+        DataInputStream dis = new DataInputStream(fis);
+        byte[] keyBytes = new byte[(int) f1.length()];
+        dis.readFully(keyBytes);
+        PKCS8EncodedKeySpec spec =
+                new PKCS8EncodedKeySpec(keyBytes);
         KeyFactory kf = KeyFactory.getInstance("RSA");
         return kf.generatePrivate(spec);
     }
 
+    public static String decryptPassword(String passwordFile,String privatekeyFile) throws Exception {
+        PrivateKey prk = getPrivateKey(privatekeyFile);
+        javax.crypto.Cipher cipher = javax.crypto.Cipher.getInstance("RSA");
+        cipher.init(Cipher.DECRYPT_MODE, prk);
+        File f1 = new File(passwordFile);
+        byte[] fis1 = FileUtils.readFileToByteArray(f1);
+
+        byte[] decryptedTextPassword = cipher.doFinal(fis1);
+        return new String(decryptedTextPassword);
+    }
 
 }
