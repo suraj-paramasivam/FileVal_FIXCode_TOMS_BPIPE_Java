@@ -5,9 +5,13 @@ import quickfix.field.MsgType;
 import quickfix.field.Symbol;
 import quickfix.fix50.MarketDataRequest;
 
+import java.io.Console;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
-import java.util.UUID;
+import java.util.*;
+
+import static quickfix.MessageUtils.parse;
+import quickfix.DataDictionary;
 
 
 public class FIXParser implements Application {
@@ -18,8 +22,7 @@ public class FIXParser implements Application {
 
     public static void main(String[] args) throws ConfigError, FileNotFoundException, InterruptedException, SessionNotFound {
         SessionSettings settings = new SessionSettings("res/initiator.config");
-
-        Application application = new FIXParser();
+                Application application = new FIXParser();
         MessageStoreFactory messageStoreFactory = new FileStoreFactory(settings);
         LogFactory logFactory = new ScreenLogFactory(true, true, true);
         MessageFactory messageFactory = new DefaultMessageFactory();
@@ -35,7 +38,11 @@ public class FIXParser implements Application {
             Session session = Session.lookupSession(sessionID);
             userLogon(session);
             //productRequest(session);
-            MDRequest(session);
+             MDRequest(session);
+
+
+
+
 
         }
     }
@@ -50,16 +57,16 @@ public class FIXParser implements Application {
         message.getHeader().setField(new StringField(35, "BE"));
 
         // SenderCompID
-        message.getHeader().setField(new StringField(49, "MD01_FAB_FIXSTG2"));
+        message.getHeader().setField(new StringField(49, "MD02_FAB_FIXSTG5"));
 
         // TargetCompID, with enumeration
         message.getHeader().setField(new StringField(56, "FIXCTSBOBGW"));
 
         //Username
-        message.getHeader().setField(new StringField(553, "bbnd_fab_md1"));
+        message.getHeader().setField(new StringField(553, "bbnd_fab_md2"));
 
         // Password
-        message.getHeader().setField(new StringField(554, "testing1"));
+        message.getHeader().setField(new StringField(554, "bgctest123"));
 
         // UserRequestID
         message.getHeader().setField(new StringField(923, "661516808"));
@@ -104,6 +111,7 @@ public class FIXParser implements Application {
 
     //Market Data  requests
     public static void MDRequest(Session session) throws SessionNotFound, InterruptedException {
+
         UUID uuid = UUID.randomUUID();
         String randomUUIDString = uuid.toString();
         Message message = new Message();
@@ -152,16 +160,30 @@ public class FIXParser implements Application {
 
         System.out.println(message);
         Session.sendToTarget(message, sessionID);
+
         Thread.sleep(5000);
+        Scanner scanner = new Scanner(System.in);
+        //Initial Read
+        while(scanner.hasNextLine()){
+            List<String> msgs = new ArrayList<String>();
+            Scanner lineScanner = new Scanner(scanner.nextLine());
+            while(lineScanner.hasNext()){
+                msgs.add(lineScanner.next());
+            }
+            lineScanner.close();
+            System.out.println("The Received Messages are : "+msgs);
+        }
+        scanner.close();
+
+
     }
 
     public void decodeMessage() throws ConfigError {
         //MessageFactory messageFactory = new MessageFactory();
         DefaultMessageFactory messageFactory = new DefaultMessageFactory();
-        InputStream fix42Input = FIXParser.class.getResourceAsStream("/FIX42_tt.xml");
-        DataDictionary dataDictionary = new DataDictionary(fix42Input);
+        InputStream fix44Input = FIXParser.class.getResourceAsStream("/FIX44_tt.xml");
+        DataDictionary dataDictionary = new DataDictionary(fix44Input);
 
-        //Message message = MessageUtils.parse(messageFactory, dataDictionary, messageStr);
     }
 
     @Override
@@ -211,5 +233,49 @@ public class FIXParser implements Application {
         System.out.println("FromApp");
     }
 
+
+
 }
 
+class MessagePrinter{
+    public void print(DataDictionary dd, Message message) throws FieldNotFound {
+        String msgType = message.getHeader().getString(MsgType.FIELD);
+
+    }
+
+    public void printFields(String prefix, DataDictionary dd, String msgType,FieldMap fmp) throws ConfigError, FieldNotFound {
+        Iterator fieldIterator = fmp.iterator();
+        while (fieldIterator.hasNext()) {
+            Field field = (Field) fieldIterator.next();
+            if (!isGroupCountField(dd, field)) {
+                String value = fmp.getString(field.getTag());
+                if (dd.hasFieldValue(field.getTag())) {
+                    value = dd.getValueName(field.getTag(), fmp.getString(field.getTag()) + "(" + value + ")");
+
+                }
+                System.out.println(prefix + dd.getFieldName(field.getTag()) + ":" + value);
+
+                Iterator groupsKeys = fmp.groupKeyIterator();
+                while (groupsKeys.hasNext()) {
+                    int groupCountTag = ((Integer) groupsKeys.next()).intValue();
+                    System.out.println(prefix + dd.getFieldName(groupCountTag) + ": count = "
+                            + fmp.getInt(groupCountTag));
+                    Group g = new Group(groupCountTag, 0);
+                    int i = 1;
+                    while (fmp.hasGroup(i, groupCountTag)) {
+                        if (i > 1) {
+                            System.out.println(prefix + "  ----");
+                        }
+                        fmp.getGroup(i, g);
+                        printFields(prefix + "  ", dd, msgType, g);
+                        i++;
+                    }
+                }
+            }
+        }
+    }
+    private boolean isGroupCountField(DataDictionary dd, Field field) throws ConfigError {
+
+        return dd.getFieldType(field.getTag()) == FieldType.NUMINGROUP;
+    }
+}
