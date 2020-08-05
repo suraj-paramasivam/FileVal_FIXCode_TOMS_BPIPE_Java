@@ -1,0 +1,23 @@
+{
+"namespace":"com.custom.inforamtica.fab.credittrading.fix",
+"type":"record",
+"name":"bgcgfi",
+"fields":[
+            {"name": "MSGTYPE", "type":["string","null"]},
+            {"name": "MSGSEQNUM", "type":["int","null"]},
+            {"name": "SENDERCOMPID", "type":["string","null"]},
+            {"name": "SENDINGTIME", "type":["string","null"]},
+            {"name": "TARGETCOMPID", "type":["string","null"]},
+            {"name": "MDREQID", "type":["string","null"]},
+            {"name": "MDUPDATEACTION", "type":["string","null"]},
+            {"name": "FULLSYMBOL", "type":["string","null"]},
+            {"name": "TYPEOFINSTRUMENT", "type":["string","null"]},
+            {"name": "QUOTATIONMETHOD", "type":["string","null"]},
+            {"name": "ISIN", "type":["string","null"]},
+            {"name": "REFPRICEQUITEDTYPE", "type":["string","null"]},
+            {"name": "MDENTRYPX", "type":["int","null"]},
+            {"name": "MDENTRYSIZE", "type":["string","null"]},
+            {"name": "MDENTRYDATE", "type":["string","null"]},
+            {"name": "MDENTRYTIME", "type":["string","null"]}
+           ]
+}

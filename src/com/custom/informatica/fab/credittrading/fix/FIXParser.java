@@ -1,5 +1,6 @@
 package com.custom.informatica.fab.credittrading.fix;
 
+import org.checkerframework.checker.units.qual.K;
 import quickfix.*;
 import quickfix.field.MsgType;
 import quickfix.field.Symbol;
@@ -12,6 +13,7 @@ import java.util.*;
 
 import static quickfix.MessageUtils.parse;
 import quickfix.DataDictionary;
+import com.custom.informatica.fab.credittrading.fix.KafkaPublisher;
 
 
 public class FIXParser implements Application {
@@ -20,9 +22,17 @@ public class FIXParser implements Application {
     private static volatile SessionID sessionID;
     private final Initiator initiator = null;
 
+    DefaultMessageFactory messageFactory = new DefaultMessageFactory();
+    public static String opValue=null;
+
+
+    public FIXParser() throws ConfigError {
+    }
+
+
     public static void main(String[] args) throws ConfigError, FileNotFoundException, InterruptedException, SessionNotFound {
         SessionSettings settings = new SessionSettings("res/initiator.config");
-                Application application = new FIXParser();
+        Application application = new FIXParser();
         MessageStoreFactory messageStoreFactory = new FileStoreFactory(settings);
         LogFactory logFactory = new ScreenLogFactory(true, true, true);
         MessageFactory messageFactory = new DefaultMessageFactory();
@@ -57,16 +67,16 @@ public class FIXParser implements Application {
         message.getHeader().setField(new StringField(35, "BE"));
 
         // SenderCompID
-        message.getHeader().setField(new StringField(49, "MD02_FAB_FIXSTG5"));
+        message.getHeader().setField(new StringField(49, "MD01_FAB_FIXSTG2"));
 
         // TargetCompID, with enumeration
         message.getHeader().setField(new StringField(56, "FIXCTSBOBGW"));
 
         //Username
-        message.getHeader().setField(new StringField(553, "bbnd_fab_md2"));
+        message.getHeader().setField(new StringField(553, "bbnd_fab_md1"));
 
         // Password
-        message.getHeader().setField(new StringField(554, "bgctest123"));
+        message.getHeader().setField(new StringField(554, "testing1"));
 
         // UserRequestID
         message.getHeader().setField(new StringField(923, "661516808"));
@@ -160,29 +170,15 @@ public class FIXParser implements Application {
 
         System.out.println(message);
         Session.sendToTarget(message, sessionID);
-
         Thread.sleep(5000);
-        Scanner scanner = new Scanner(System.in);
-        //Initial Read
-        while(scanner.hasNextLine()){
-            List<String> msgs = new ArrayList<String>();
-            Scanner lineScanner = new Scanner(scanner.nextLine());
-            while(lineScanner.hasNext()){
-                msgs.add(lineScanner.next());
-            }
-            lineScanner.close();
-            System.out.println("The Received Messages are : "+msgs);
-        }
-        scanner.close();
-
-
     }
 
-    public void decodeMessage() throws ConfigError {
+    public void decodeMessage(Message message) throws ConfigError, FieldNotFound {
         //MessageFactory messageFactory = new MessageFactory();
-        DefaultMessageFactory messageFactory = new DefaultMessageFactory();
-        InputStream fix44Input = FIXParser.class.getResourceAsStream("/FIX44_tt.xml");
+        InputStream fix44Input = FIXParser.class.getResourceAsStream("CTS_BoB_FIX44.xml");
         DataDictionary dataDictionary = new DataDictionary(fix44Input);
+        MessagePrinter mpr = new MessagePrinter();
+        mpr.print(dataDictionary,message);
 
     }
 
@@ -230,7 +226,12 @@ public class FIXParser implements Application {
 
     @Override
     public void fromApp(Message message, SessionID sessionID) throws FieldNotFound, IncorrectDataFormat, IncorrectTagValue, UnsupportedMessageType {
-        System.out.println("FromApp");
+        try {
+            decodeMessage(message);
+        } catch (ConfigError configError) {
+            configError.printStackTrace();
+        }
+
     }
 
 
@@ -238,8 +239,14 @@ public class FIXParser implements Application {
 }
 
 class MessagePrinter{
-    public void print(DataDictionary dd, Message message) throws FieldNotFound {
+    public void print(DataDictionary dd, Message message) throws FieldNotFound, ConfigError {
         String msgType = message.getHeader().getString(MsgType.FIELD);
+        printFields("",dd,msgType,message.getHeader());
+        printFields("",dd,msgType,message);
+        printFields("",dd,msgType,message.getTrailer());
+        KafkaPublisher kp = new KafkaPublisher();
+        System.out.println("Output value"+ FIXParser.opValue);
+
 
     }
 
@@ -249,6 +256,7 @@ class MessagePrinter{
             Field field = (Field) fieldIterator.next();
             if (!isGroupCountField(dd, field)) {
                 String value = fmp.getString(field.getTag());
+                FIXParser.opValue = value;
                 if (dd.hasFieldValue(field.getTag())) {
                     value = dd.getValueName(field.getTag(), fmp.getString(field.getTag()) + "(" + value + ")");
 

@@ -11,5 +11,10 @@
     <orderEntry type="library" name="org.quickfixj-2.2" level="application" />
     <orderEntry type="library" name="jsch-0.1.55" level="application" />
     <orderEntry type="library" name="commons-io-2.7" level="application" />
+    <orderEntry type="library" name="okhttp-3.7.0" level="application" />
+    <orderEntry type="library" name="connect-api-2.6.0" level="application" />
+    <orderEntry type="library" name="avro" level="application" />
+    <orderEntry type="library" name="kafka-clients-2.1.0" level="application" />
+    <orderEntry type="library" name="avro-tools-1.10.0" level="application" />
   </component>
 </module>

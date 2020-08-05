@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-08-03T15:23:52</date>
+  <millis>1596448432092</millis>
+  <sequence>0</sequence>
+  <logger>com.custom.informatica.fab.credittrading.batch</logger>
+  <level>INFO</level>
+  <class>com.custom.informatica.fab.credittrading.batch.SFTPDownload</class>
+  <method>getPrivateKey</method>
+  <thread>1</thread>
+  <message>Public key generated to file: test_private.key</message>
+</record>
+<record>
+  <date>2020-08-03T15:23:53</date>
+  <millis>1596448433854</millis>
+  <sequence>1</sequence>
+  <logger>com.custom.informatica.fab.credittrading.batch</logger>
+  <level>INFO</level>
+  <class>com.custom.informatica.fab.credittrading.batch.SFTPDownload</class>
+  <method>decryptPassword</method>
+  <thread>1</thread>
+  <message>Password Decrypted to :password</message>
+</record>
+<record>
+  <date>2020-08-03T15:24:14</date>
+  <millis>1596448454872</millis>
+  <sequence>2</sequence>
+  <logger>com.custom.informatica.fab.credittrading.batch</logger>
+  <level>SEVERE</level>
+  <class>com.custom.informatica.fab.credittrading.batch.SFTPDownload</class>
+  <method>connect</method>
+  <thread>1</thread>
+  <message>Exception occurred during connection, StackTrace is : com.jcraft.jsch.JSchException: ProxyHTTP: com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</message>
+</record>
+<record>
+  <date>2020-08-03T15:24:14</date>
+  <millis>1596448454882</millis>
+  <sequence>3</sequence>
+  <logger>com.custom.informatica.fab.credittrading.batch</logger>
+  <level>SEVERE</level>
+  <class>com.custom.informatica.fab.credittrading.batch.SFTPDownload</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>An Exception occurred: com.jcraft.jsch.JSchException: session is down</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-08-03T15:25:21</date>
+  <millis>1596448521275</millis>
+  <sequence>0</sequence>
+  <logger>com.custom.informatica.fab.credittrading.batch</logger>
+  <level>INFO</level>
+  <class>com.custom.informatica.fab.credittrading.batch.SFTPDownload</class>
+  <method>getPrivateKey</method>
+  <thread>1</thread>
+  <message>Public key generated to file: test_private.key</message>
+</record>
+<record>
+  <date>2020-08-03T15:25:23</date>
+  <millis>1596448523041</millis>
+  <sequence>1</sequence>
+  <logger>com.custom.informatica.fab.credittrading.batch</logger>
+  <level>INFO</level>
+  <class>com.custom.informatica.fab.credittrading.batch.SFTPDownload</class>
+  <method>decryptPassword</method>
+  <thread>1</thread>
+  <message>Password Decrypted to :password</message>
+</record>
+<record>
+  <date>2020-08-03T15:25:44</date>
+  <millis>1596448544045</millis>
+  <sequence>2</sequence>
+  <logger>com.custom.informatica.fab.credittrading.batch</logger>
+  <level>SEVERE</level>
+  <class>com.custom.informatica.fab.credittrading.batch.SFTPDownload</class>
+  <method>connect</method>
+  <thread>1</thread>
+  <message>Exception occurred during connection, StackTrace is : com.jcraft.jsch.JSchException: ProxyHTTP: com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</message>
+</record>
+<record>
+  <date>2020-08-03T15:25:44</date>
+  <millis>1596448544046</millis>
+  <sequence>3</sequence>
+  <logger>com.custom.informatica.fab.credittrading.batch</logger>
+  <level>SEVERE</level>
+  <class>com.custom.informatica.fab.credittrading.batch.SFTPDownload</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>An Exception occurred: com.jcraft.jsch.JSchException: session is down</message>
+</record>
+</log>
