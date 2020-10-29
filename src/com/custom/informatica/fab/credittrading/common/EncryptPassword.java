@@ -72,7 +72,7 @@ public class EncryptPassword {
         byte[] pass = password.getBytes();
         cipher.update(pass);
         byte[] encryptedPassword = cipher.doFinal();
-        FileOutputStream passFile = new FileOutputStream(new File("passwordFile"));
+        FileOutputStream passFile = new FileOutputStream(new File(passwordFile));
         passFile.write(encryptedPassword);
     }
 

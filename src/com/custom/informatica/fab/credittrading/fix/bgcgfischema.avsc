@@ -1,5 +1,5 @@
 {
-"namespace":"com.custom.inforamtica.fab.credittrading.fix",
+"namespace":"com.custom.informatica.fab.credittrading.fix",
 "type":"record",
 "name":"bgcgfi",
 "fields":[
@@ -11,13 +11,14 @@
             {"name": "MDREQID", "type":["string","null"]},
             {"name": "MDUPDATEACTION", "type":["string","null"]},
             {"name": "FULLSYMBOL", "type":["string","null"]},
-            {"name": "TYPEOFINSTRUMENT", "type":["string","null"]},
-            {"name": "QUOTATIONMETHOD", "type":["string","null"]},
             {"name": "ISIN", "type":["string","null"]},
-            {"name": "REFPRICEQUITEDTYPE", "type":["string","null"]},
             {"name": "MDENTRYPX", "type":["int","null"]},
             {"name": "MDENTRYSIZE", "type":["string","null"]},
-            {"name": "MDENTRYDATE", "type":["string","null"]},
-            {"name": "MDENTRYTIME", "type":["string","null"]}
+            {"name": "MDENTRYTYPE", "type":["string","null"]},
+			{"name": "MDENTRYID", "type":["string","null"]},
+			{"name": "TRADINGSESSIONID", "type":["string","null"]},
+			{"name": "ORDERID", "type":["string","null"]},
+			{"name": "MDENTRYDATE", "type":["string","null"]},
+			{"name": "MDENTRYTIME", "type":["string","null"]}
            ]
 }

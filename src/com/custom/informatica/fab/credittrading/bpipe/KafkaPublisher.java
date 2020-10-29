@@ -1,4 +1,4 @@
-package com.custom.informatica.fab.credittrading.fix;
+package com.custom.informatica.fab.credittrading.bpipe;
 
 import org.apache.kafka.clients.admin.AdminClient;
 import org.apache.kafka.clients.producer.Callback;
@@ -22,7 +22,7 @@ import java.util.concurrent.ExecutionException;
  */
 public class KafkaPublisher {
 
-    public static final Logger loggerk = Logger.getLogger(com.custom.informatica.fab.credittrading.fix.KafkaPublisher.class);
+    public static final Logger loggerk = Logger.getLogger(KafkaPublisher.class);
     public static String topic_kafka;
 
     public static String getTimestamp() {

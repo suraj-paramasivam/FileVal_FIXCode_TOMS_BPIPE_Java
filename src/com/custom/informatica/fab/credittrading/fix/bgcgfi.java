@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 4491765696209995516L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"bgcgfi\",\"namespace\":\"com.custom.informatica.fab.credittrading.fix\",\"fields\":[{\"name\":\"MSGTYPE\",\"type\":[\"string\",\"null\"]},{\"name\":\"MSGSEQNUM\",\"type\":[\"int\",\"null\"]},{\"name\":\"SENDERCOMPID\",\"type\":[\"string\",\"null\"]},{\"name\":\"SENDINGTIME\",\"type\":[\"string\",\"null\"]},{\"name\":\"TARGETCOMPID\",\"type\":[\"string\",\"null\"]},{\"name\":\"MDREQID\",\"type\":[\"string\",\"null\"]},{\"name\":\"MDUPDATEACTION\",\"type\":[\"string\",\"null\"]},{\"name\":\"FULLSYMBOL\",\"type\":[\"string\",\"null\"]},{\"name\":\"TYPEOFINSTRUMENT\",\"type\":[\"string\",\"null\"]},{\"name\":\"QUOTATIONMETHOD\",\"type\":[\"string\",\"null\"]},{\"name\":\"ISIN\",\"type\":[\"string\",\"null\"]},{\"name\":\"REFPRICEQUITEDTYPE\",\"type\":[\"string\",\"null\"]},{\"name\":\"MDENTRYPX\",\"type\":[\"int\",\"null\"]},{\"name\":\"MDENTRYSIZE\",\"type\":[\"string\",\"null\"]},{\"name\":\"MDENTRYDATE\",\"type\":[\"string\",\"null\"]},{\"name\":\"MDENTRYTIME\",\"type\":[\"string\",\"null\"]}]}");
+  private static final long serialVersionUID = -319481571674436100L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"bgcgfi\",\"namespace\":\"com.custom.informatica.fab.credittrading.fix\",\"fields\":[{\"name\":\"MSGTYPE\",\"type\":[\"string\",\"null\"]},{\"name\":\"MSGSEQNUM\",\"type\":[\"int\",\"null\"]},{\"name\":\"SENDERCOMPID\",\"type\":[\"string\",\"null\"]},{\"name\":\"SENDINGTIME\",\"type\":[\"string\",\"null\"]},{\"name\":\"TARGETCOMPID\",\"type\":[\"string\",\"null\"]},{\"name\":\"MDREQID\",\"type\":[\"string\",\"null\"]},{\"name\":\"MDUPDATEACTION\",\"type\":[\"string\",\"null\"]},{\"name\":\"FULLSYMBOL\",\"type\":[\"string\",\"null\"]},{\"name\":\"ISIN\",\"type\":[\"string\",\"null\"]},{\"name\":\"MDENTRYPX\",\"type\":[\"int\",\"null\"]},{\"name\":\"MDENTRYSIZE\",\"type\":[\"string\",\"null\"]},{\"name\":\"MDENTRYTYPE\",\"type\":[\"string\",\"null\"]},{\"name\":\"MDENTRYID\",\"type\":[\"string\",\"null\"]},{\"name\":\"TRADINGSESSIONID\",\"type\":[\"string\",\"null\"]},{\"name\":\"ORDERID\",\"type\":[\"string\",\"null\"]},{\"name\":\"MDENTRYDATE\",\"type\":[\"string\",\"null\"]},{\"name\":\"MDENTRYTIME\",\"type\":[\"string\",\"null\"]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -79,12 +79,13 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
    private java.lang.CharSequence MDREQID;
    private java.lang.CharSequence MDUPDATEACTION;
    private java.lang.CharSequence FULLSYMBOL;
-   private java.lang.CharSequence TYPEOFINSTRUMENT;
-   private java.lang.CharSequence QUOTATIONMETHOD;
    private java.lang.CharSequence ISIN;
-   private java.lang.CharSequence REFPRICEQUITEDTYPE;
    private java.lang.Integer MDENTRYPX;
    private java.lang.CharSequence MDENTRYSIZE;
+   private java.lang.CharSequence MDENTRYTYPE;
+   private java.lang.CharSequence MDENTRYID;
+   private java.lang.CharSequence TRADINGSESSIONID;
+   private java.lang.CharSequence ORDERID;
    private java.lang.CharSequence MDENTRYDATE;
    private java.lang.CharSequence MDENTRYTIME;
 
@@ -105,16 +106,17 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
    * @param MDREQID The new value for MDREQID
    * @param MDUPDATEACTION The new value for MDUPDATEACTION
    * @param FULLSYMBOL The new value for FULLSYMBOL
-   * @param TYPEOFINSTRUMENT The new value for TYPEOFINSTRUMENT
-   * @param QUOTATIONMETHOD The new value for QUOTATIONMETHOD
    * @param ISIN The new value for ISIN
-   * @param REFPRICEQUITEDTYPE The new value for REFPRICEQUITEDTYPE
    * @param MDENTRYPX The new value for MDENTRYPX
    * @param MDENTRYSIZE The new value for MDENTRYSIZE
+   * @param MDENTRYTYPE The new value for MDENTRYTYPE
+   * @param MDENTRYID The new value for MDENTRYID
+   * @param TRADINGSESSIONID The new value for TRADINGSESSIONID
+   * @param ORDERID The new value for ORDERID
    * @param MDENTRYDATE The new value for MDENTRYDATE
    * @param MDENTRYTIME The new value for MDENTRYTIME
    */
-  public bgcgfi(java.lang.CharSequence MSGTYPE, java.lang.Integer MSGSEQNUM, java.lang.CharSequence SENDERCOMPID, java.lang.CharSequence SENDINGTIME, java.lang.CharSequence TARGETCOMPID, java.lang.CharSequence MDREQID, java.lang.CharSequence MDUPDATEACTION, java.lang.CharSequence FULLSYMBOL, java.lang.CharSequence TYPEOFINSTRUMENT, java.lang.CharSequence QUOTATIONMETHOD, java.lang.CharSequence ISIN, java.lang.CharSequence REFPRICEQUITEDTYPE, java.lang.Integer MDENTRYPX, java.lang.CharSequence MDENTRYSIZE, java.lang.CharSequence MDENTRYDATE, java.lang.CharSequence MDENTRYTIME) {
+  public bgcgfi(java.lang.CharSequence MSGTYPE, java.lang.Integer MSGSEQNUM, java.lang.CharSequence SENDERCOMPID, java.lang.CharSequence SENDINGTIME, java.lang.CharSequence TARGETCOMPID, java.lang.CharSequence MDREQID, java.lang.CharSequence MDUPDATEACTION, java.lang.CharSequence FULLSYMBOL, java.lang.CharSequence ISIN, java.lang.Integer MDENTRYPX, java.lang.CharSequence MDENTRYSIZE, java.lang.CharSequence MDENTRYTYPE, java.lang.CharSequence MDENTRYID, java.lang.CharSequence TRADINGSESSIONID, java.lang.CharSequence ORDERID, java.lang.CharSequence MDENTRYDATE, java.lang.CharSequence MDENTRYTIME) {
     this.MSGTYPE = MSGTYPE;
     this.MSGSEQNUM = MSGSEQNUM;
     this.SENDERCOMPID = SENDERCOMPID;
@@ -123,12 +125,13 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
     this.MDREQID = MDREQID;
     this.MDUPDATEACTION = MDUPDATEACTION;
     this.FULLSYMBOL = FULLSYMBOL;
-    this.TYPEOFINSTRUMENT = TYPEOFINSTRUMENT;
-    this.QUOTATIONMETHOD = QUOTATIONMETHOD;
     this.ISIN = ISIN;
-    this.REFPRICEQUITEDTYPE = REFPRICEQUITEDTYPE;
     this.MDENTRYPX = MDENTRYPX;
     this.MDENTRYSIZE = MDENTRYSIZE;
+    this.MDENTRYTYPE = MDENTRYTYPE;
+    this.MDENTRYID = MDENTRYID;
+    this.TRADINGSESSIONID = TRADINGSESSIONID;
+    this.ORDERID = ORDERID;
     this.MDENTRYDATE = MDENTRYDATE;
     this.MDENTRYTIME = MDENTRYTIME;
   }
@@ -146,14 +149,15 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
     case 5: return MDREQID;
     case 6: return MDUPDATEACTION;
     case 7: return FULLSYMBOL;
-    case 8: return TYPEOFINSTRUMENT;
-    case 9: return QUOTATIONMETHOD;
-    case 10: return ISIN;
-    case 11: return REFPRICEQUITEDTYPE;
-    case 12: return MDENTRYPX;
-    case 13: return MDENTRYSIZE;
-    case 14: return MDENTRYDATE;
-    case 15: return MDENTRYTIME;
+    case 8: return ISIN;
+    case 9: return MDENTRYPX;
+    case 10: return MDENTRYSIZE;
+    case 11: return MDENTRYTYPE;
+    case 12: return MDENTRYID;
+    case 13: return TRADINGSESSIONID;
+    case 14: return ORDERID;
+    case 15: return MDENTRYDATE;
+    case 16: return MDENTRYTIME;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -170,14 +174,15 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
     case 5: MDREQID = (java.lang.CharSequence)value$; break;
     case 6: MDUPDATEACTION = (java.lang.CharSequence)value$; break;
     case 7: FULLSYMBOL = (java.lang.CharSequence)value$; break;
-    case 8: TYPEOFINSTRUMENT = (java.lang.CharSequence)value$; break;
-    case 9: QUOTATIONMETHOD = (java.lang.CharSequence)value$; break;
-    case 10: ISIN = (java.lang.CharSequence)value$; break;
-    case 11: REFPRICEQUITEDTYPE = (java.lang.CharSequence)value$; break;
-    case 12: MDENTRYPX = (java.lang.Integer)value$; break;
-    case 13: MDENTRYSIZE = (java.lang.CharSequence)value$; break;
-    case 14: MDENTRYDATE = (java.lang.CharSequence)value$; break;
-    case 15: MDENTRYTIME = (java.lang.CharSequence)value$; break;
+    case 8: ISIN = (java.lang.CharSequence)value$; break;
+    case 9: MDENTRYPX = (java.lang.Integer)value$; break;
+    case 10: MDENTRYSIZE = (java.lang.CharSequence)value$; break;
+    case 11: MDENTRYTYPE = (java.lang.CharSequence)value$; break;
+    case 12: MDENTRYID = (java.lang.CharSequence)value$; break;
+    case 13: TRADINGSESSIONID = (java.lang.CharSequence)value$; break;
+    case 14: ORDERID = (java.lang.CharSequence)value$; break;
+    case 15: MDENTRYDATE = (java.lang.CharSequence)value$; break;
+    case 16: MDENTRYTIME = (java.lang.CharSequence)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -319,40 +324,6 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
   }
 
   /**
-   * Gets the value of the 'TYPEOFINSTRUMENT' field.
-   * @return The value of the 'TYPEOFINSTRUMENT' field.
-   */
-  public java.lang.CharSequence getTYPEOFINSTRUMENT() {
-    return TYPEOFINSTRUMENT;
-  }
-
-
-  /**
-   * Sets the value of the 'TYPEOFINSTRUMENT' field.
-   * @param value the value to set.
-   */
-  public void setTYPEOFINSTRUMENT(java.lang.CharSequence value) {
-    this.TYPEOFINSTRUMENT = value;
-  }
-
-  /**
-   * Gets the value of the 'QUOTATIONMETHOD' field.
-   * @return The value of the 'QUOTATIONMETHOD' field.
-   */
-  public java.lang.CharSequence getQUOTATIONMETHOD() {
-    return QUOTATIONMETHOD;
-  }
-
-
-  /**
-   * Sets the value of the 'QUOTATIONMETHOD' field.
-   * @param value the value to set.
-   */
-  public void setQUOTATIONMETHOD(java.lang.CharSequence value) {
-    this.QUOTATIONMETHOD = value;
-  }
-
-  /**
    * Gets the value of the 'ISIN' field.
    * @return The value of the 'ISIN' field.
    */
@@ -367,23 +338,6 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
    */
   public void setISIN(java.lang.CharSequence value) {
     this.ISIN = value;
-  }
-
-  /**
-   * Gets the value of the 'REFPRICEQUITEDTYPE' field.
-   * @return The value of the 'REFPRICEQUITEDTYPE' field.
-   */
-  public java.lang.CharSequence getREFPRICEQUITEDTYPE() {
-    return REFPRICEQUITEDTYPE;
-  }
-
-
-  /**
-   * Sets the value of the 'REFPRICEQUITEDTYPE' field.
-   * @param value the value to set.
-   */
-  public void setREFPRICEQUITEDTYPE(java.lang.CharSequence value) {
-    this.REFPRICEQUITEDTYPE = value;
   }
 
   /**
@@ -418,6 +372,74 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
    */
   public void setMDENTRYSIZE(java.lang.CharSequence value) {
     this.MDENTRYSIZE = value;
+  }
+
+  /**
+   * Gets the value of the 'MDENTRYTYPE' field.
+   * @return The value of the 'MDENTRYTYPE' field.
+   */
+  public java.lang.CharSequence getMDENTRYTYPE() {
+    return MDENTRYTYPE;
+  }
+
+
+  /**
+   * Sets the value of the 'MDENTRYTYPE' field.
+   * @param value the value to set.
+   */
+  public void setMDENTRYTYPE(java.lang.CharSequence value) {
+    this.MDENTRYTYPE = value;
+  }
+
+  /**
+   * Gets the value of the 'MDENTRYID' field.
+   * @return The value of the 'MDENTRYID' field.
+   */
+  public java.lang.CharSequence getMDENTRYID() {
+    return MDENTRYID;
+  }
+
+
+  /**
+   * Sets the value of the 'MDENTRYID' field.
+   * @param value the value to set.
+   */
+  public void setMDENTRYID(java.lang.CharSequence value) {
+    this.MDENTRYID = value;
+  }
+
+  /**
+   * Gets the value of the 'TRADINGSESSIONID' field.
+   * @return The value of the 'TRADINGSESSIONID' field.
+   */
+  public java.lang.CharSequence getTRADINGSESSIONID() {
+    return TRADINGSESSIONID;
+  }
+
+
+  /**
+   * Sets the value of the 'TRADINGSESSIONID' field.
+   * @param value the value to set.
+   */
+  public void setTRADINGSESSIONID(java.lang.CharSequence value) {
+    this.TRADINGSESSIONID = value;
+  }
+
+  /**
+   * Gets the value of the 'ORDERID' field.
+   * @return The value of the 'ORDERID' field.
+   */
+  public java.lang.CharSequence getORDERID() {
+    return ORDERID;
+  }
+
+
+  /**
+   * Sets the value of the 'ORDERID' field.
+   * @param value the value to set.
+   */
+  public void setORDERID(java.lang.CharSequence value) {
+    this.ORDERID = value;
   }
 
   /**
@@ -503,12 +525,13 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
     private java.lang.CharSequence MDREQID;
     private java.lang.CharSequence MDUPDATEACTION;
     private java.lang.CharSequence FULLSYMBOL;
-    private java.lang.CharSequence TYPEOFINSTRUMENT;
-    private java.lang.CharSequence QUOTATIONMETHOD;
     private java.lang.CharSequence ISIN;
-    private java.lang.CharSequence REFPRICEQUITEDTYPE;
     private java.lang.Integer MDENTRYPX;
     private java.lang.CharSequence MDENTRYSIZE;
+    private java.lang.CharSequence MDENTRYTYPE;
+    private java.lang.CharSequence MDENTRYID;
+    private java.lang.CharSequence TRADINGSESSIONID;
+    private java.lang.CharSequence ORDERID;
     private java.lang.CharSequence MDENTRYDATE;
     private java.lang.CharSequence MDENTRYTIME;
 
@@ -555,37 +578,41 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
         this.FULLSYMBOL = data().deepCopy(fields()[7].schema(), other.FULLSYMBOL);
         fieldSetFlags()[7] = other.fieldSetFlags()[7];
       }
-      if (isValidValue(fields()[8], other.TYPEOFINSTRUMENT)) {
-        this.TYPEOFINSTRUMENT = data().deepCopy(fields()[8].schema(), other.TYPEOFINSTRUMENT);
+      if (isValidValue(fields()[8], other.ISIN)) {
+        this.ISIN = data().deepCopy(fields()[8].schema(), other.ISIN);
         fieldSetFlags()[8] = other.fieldSetFlags()[8];
       }
-      if (isValidValue(fields()[9], other.QUOTATIONMETHOD)) {
-        this.QUOTATIONMETHOD = data().deepCopy(fields()[9].schema(), other.QUOTATIONMETHOD);
+      if (isValidValue(fields()[9], other.MDENTRYPX)) {
+        this.MDENTRYPX = data().deepCopy(fields()[9].schema(), other.MDENTRYPX);
         fieldSetFlags()[9] = other.fieldSetFlags()[9];
       }
-      if (isValidValue(fields()[10], other.ISIN)) {
-        this.ISIN = data().deepCopy(fields()[10].schema(), other.ISIN);
+      if (isValidValue(fields()[10], other.MDENTRYSIZE)) {
+        this.MDENTRYSIZE = data().deepCopy(fields()[10].schema(), other.MDENTRYSIZE);
         fieldSetFlags()[10] = other.fieldSetFlags()[10];
       }
-      if (isValidValue(fields()[11], other.REFPRICEQUITEDTYPE)) {
-        this.REFPRICEQUITEDTYPE = data().deepCopy(fields()[11].schema(), other.REFPRICEQUITEDTYPE);
+      if (isValidValue(fields()[11], other.MDENTRYTYPE)) {
+        this.MDENTRYTYPE = data().deepCopy(fields()[11].schema(), other.MDENTRYTYPE);
         fieldSetFlags()[11] = other.fieldSetFlags()[11];
       }
-      if (isValidValue(fields()[12], other.MDENTRYPX)) {
-        this.MDENTRYPX = data().deepCopy(fields()[12].schema(), other.MDENTRYPX);
+      if (isValidValue(fields()[12], other.MDENTRYID)) {
+        this.MDENTRYID = data().deepCopy(fields()[12].schema(), other.MDENTRYID);
         fieldSetFlags()[12] = other.fieldSetFlags()[12];
       }
-      if (isValidValue(fields()[13], other.MDENTRYSIZE)) {
-        this.MDENTRYSIZE = data().deepCopy(fields()[13].schema(), other.MDENTRYSIZE);
+      if (isValidValue(fields()[13], other.TRADINGSESSIONID)) {
+        this.TRADINGSESSIONID = data().deepCopy(fields()[13].schema(), other.TRADINGSESSIONID);
         fieldSetFlags()[13] = other.fieldSetFlags()[13];
       }
-      if (isValidValue(fields()[14], other.MDENTRYDATE)) {
-        this.MDENTRYDATE = data().deepCopy(fields()[14].schema(), other.MDENTRYDATE);
+      if (isValidValue(fields()[14], other.ORDERID)) {
+        this.ORDERID = data().deepCopy(fields()[14].schema(), other.ORDERID);
         fieldSetFlags()[14] = other.fieldSetFlags()[14];
       }
-      if (isValidValue(fields()[15], other.MDENTRYTIME)) {
-        this.MDENTRYTIME = data().deepCopy(fields()[15].schema(), other.MDENTRYTIME);
+      if (isValidValue(fields()[15], other.MDENTRYDATE)) {
+        this.MDENTRYDATE = data().deepCopy(fields()[15].schema(), other.MDENTRYDATE);
         fieldSetFlags()[15] = other.fieldSetFlags()[15];
+      }
+      if (isValidValue(fields()[16], other.MDENTRYTIME)) {
+        this.MDENTRYTIME = data().deepCopy(fields()[16].schema(), other.MDENTRYTIME);
+        fieldSetFlags()[16] = other.fieldSetFlags()[16];
       }
     }
 
@@ -627,37 +654,41 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
         this.FULLSYMBOL = data().deepCopy(fields()[7].schema(), other.FULLSYMBOL);
         fieldSetFlags()[7] = true;
       }
-      if (isValidValue(fields()[8], other.TYPEOFINSTRUMENT)) {
-        this.TYPEOFINSTRUMENT = data().deepCopy(fields()[8].schema(), other.TYPEOFINSTRUMENT);
+      if (isValidValue(fields()[8], other.ISIN)) {
+        this.ISIN = data().deepCopy(fields()[8].schema(), other.ISIN);
         fieldSetFlags()[8] = true;
       }
-      if (isValidValue(fields()[9], other.QUOTATIONMETHOD)) {
-        this.QUOTATIONMETHOD = data().deepCopy(fields()[9].schema(), other.QUOTATIONMETHOD);
+      if (isValidValue(fields()[9], other.MDENTRYPX)) {
+        this.MDENTRYPX = data().deepCopy(fields()[9].schema(), other.MDENTRYPX);
         fieldSetFlags()[9] = true;
       }
-      if (isValidValue(fields()[10], other.ISIN)) {
-        this.ISIN = data().deepCopy(fields()[10].schema(), other.ISIN);
+      if (isValidValue(fields()[10], other.MDENTRYSIZE)) {
+        this.MDENTRYSIZE = data().deepCopy(fields()[10].schema(), other.MDENTRYSIZE);
         fieldSetFlags()[10] = true;
       }
-      if (isValidValue(fields()[11], other.REFPRICEQUITEDTYPE)) {
-        this.REFPRICEQUITEDTYPE = data().deepCopy(fields()[11].schema(), other.REFPRICEQUITEDTYPE);
+      if (isValidValue(fields()[11], other.MDENTRYTYPE)) {
+        this.MDENTRYTYPE = data().deepCopy(fields()[11].schema(), other.MDENTRYTYPE);
         fieldSetFlags()[11] = true;
       }
-      if (isValidValue(fields()[12], other.MDENTRYPX)) {
-        this.MDENTRYPX = data().deepCopy(fields()[12].schema(), other.MDENTRYPX);
+      if (isValidValue(fields()[12], other.MDENTRYID)) {
+        this.MDENTRYID = data().deepCopy(fields()[12].schema(), other.MDENTRYID);
         fieldSetFlags()[12] = true;
       }
-      if (isValidValue(fields()[13], other.MDENTRYSIZE)) {
-        this.MDENTRYSIZE = data().deepCopy(fields()[13].schema(), other.MDENTRYSIZE);
+      if (isValidValue(fields()[13], other.TRADINGSESSIONID)) {
+        this.TRADINGSESSIONID = data().deepCopy(fields()[13].schema(), other.TRADINGSESSIONID);
         fieldSetFlags()[13] = true;
       }
-      if (isValidValue(fields()[14], other.MDENTRYDATE)) {
-        this.MDENTRYDATE = data().deepCopy(fields()[14].schema(), other.MDENTRYDATE);
+      if (isValidValue(fields()[14], other.ORDERID)) {
+        this.ORDERID = data().deepCopy(fields()[14].schema(), other.ORDERID);
         fieldSetFlags()[14] = true;
       }
-      if (isValidValue(fields()[15], other.MDENTRYTIME)) {
-        this.MDENTRYTIME = data().deepCopy(fields()[15].schema(), other.MDENTRYTIME);
+      if (isValidValue(fields()[15], other.MDENTRYDATE)) {
+        this.MDENTRYDATE = data().deepCopy(fields()[15].schema(), other.MDENTRYDATE);
         fieldSetFlags()[15] = true;
+      }
+      if (isValidValue(fields()[16], other.MDENTRYTIME)) {
+        this.MDENTRYTIME = data().deepCopy(fields()[16].schema(), other.MDENTRYTIME);
+        fieldSetFlags()[16] = true;
       }
     }
 
@@ -982,86 +1013,6 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
     }
 
     /**
-      * Gets the value of the 'TYPEOFINSTRUMENT' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getTYPEOFINSTRUMENT() {
-      return TYPEOFINSTRUMENT;
-    }
-
-
-    /**
-      * Sets the value of the 'TYPEOFINSTRUMENT' field.
-      * @param value The value of 'TYPEOFINSTRUMENT'.
-      * @return This builder.
-      */
-    public com.custom.informatica.fab.credittrading.fix.bgcgfi.Builder setTYPEOFINSTRUMENT(java.lang.CharSequence value) {
-      validate(fields()[8], value);
-      this.TYPEOFINSTRUMENT = value;
-      fieldSetFlags()[8] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'TYPEOFINSTRUMENT' field has been set.
-      * @return True if the 'TYPEOFINSTRUMENT' field has been set, false otherwise.
-      */
-    public boolean hasTYPEOFINSTRUMENT() {
-      return fieldSetFlags()[8];
-    }
-
-
-    /**
-      * Clears the value of the 'TYPEOFINSTRUMENT' field.
-      * @return This builder.
-      */
-    public com.custom.informatica.fab.credittrading.fix.bgcgfi.Builder clearTYPEOFINSTRUMENT() {
-      TYPEOFINSTRUMENT = null;
-      fieldSetFlags()[8] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'QUOTATIONMETHOD' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getQUOTATIONMETHOD() {
-      return QUOTATIONMETHOD;
-    }
-
-
-    /**
-      * Sets the value of the 'QUOTATIONMETHOD' field.
-      * @param value The value of 'QUOTATIONMETHOD'.
-      * @return This builder.
-      */
-    public com.custom.informatica.fab.credittrading.fix.bgcgfi.Builder setQUOTATIONMETHOD(java.lang.CharSequence value) {
-      validate(fields()[9], value);
-      this.QUOTATIONMETHOD = value;
-      fieldSetFlags()[9] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'QUOTATIONMETHOD' field has been set.
-      * @return True if the 'QUOTATIONMETHOD' field has been set, false otherwise.
-      */
-    public boolean hasQUOTATIONMETHOD() {
-      return fieldSetFlags()[9];
-    }
-
-
-    /**
-      * Clears the value of the 'QUOTATIONMETHOD' field.
-      * @return This builder.
-      */
-    public com.custom.informatica.fab.credittrading.fix.bgcgfi.Builder clearQUOTATIONMETHOD() {
-      QUOTATIONMETHOD = null;
-      fieldSetFlags()[9] = false;
-      return this;
-    }
-
-    /**
       * Gets the value of the 'ISIN' field.
       * @return The value.
       */
@@ -1076,9 +1027,9 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
       * @return This builder.
       */
     public com.custom.informatica.fab.credittrading.fix.bgcgfi.Builder setISIN(java.lang.CharSequence value) {
-      validate(fields()[10], value);
+      validate(fields()[8], value);
       this.ISIN = value;
-      fieldSetFlags()[10] = true;
+      fieldSetFlags()[8] = true;
       return this;
     }
 
@@ -1087,7 +1038,7 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
       * @return True if the 'ISIN' field has been set, false otherwise.
       */
     public boolean hasISIN() {
-      return fieldSetFlags()[10];
+      return fieldSetFlags()[8];
     }
 
 
@@ -1097,47 +1048,7 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
       */
     public com.custom.informatica.fab.credittrading.fix.bgcgfi.Builder clearISIN() {
       ISIN = null;
-      fieldSetFlags()[10] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'REFPRICEQUITEDTYPE' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getREFPRICEQUITEDTYPE() {
-      return REFPRICEQUITEDTYPE;
-    }
-
-
-    /**
-      * Sets the value of the 'REFPRICEQUITEDTYPE' field.
-      * @param value The value of 'REFPRICEQUITEDTYPE'.
-      * @return This builder.
-      */
-    public com.custom.informatica.fab.credittrading.fix.bgcgfi.Builder setREFPRICEQUITEDTYPE(java.lang.CharSequence value) {
-      validate(fields()[11], value);
-      this.REFPRICEQUITEDTYPE = value;
-      fieldSetFlags()[11] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'REFPRICEQUITEDTYPE' field has been set.
-      * @return True if the 'REFPRICEQUITEDTYPE' field has been set, false otherwise.
-      */
-    public boolean hasREFPRICEQUITEDTYPE() {
-      return fieldSetFlags()[11];
-    }
-
-
-    /**
-      * Clears the value of the 'REFPRICEQUITEDTYPE' field.
-      * @return This builder.
-      */
-    public com.custom.informatica.fab.credittrading.fix.bgcgfi.Builder clearREFPRICEQUITEDTYPE() {
-      REFPRICEQUITEDTYPE = null;
-      fieldSetFlags()[11] = false;
+      fieldSetFlags()[8] = false;
       return this;
     }
 
@@ -1156,9 +1067,9 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
       * @return This builder.
       */
     public com.custom.informatica.fab.credittrading.fix.bgcgfi.Builder setMDENTRYPX(java.lang.Integer value) {
-      validate(fields()[12], value);
+      validate(fields()[9], value);
       this.MDENTRYPX = value;
-      fieldSetFlags()[12] = true;
+      fieldSetFlags()[9] = true;
       return this;
     }
 
@@ -1167,7 +1078,7 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
       * @return True if the 'MDENTRYPX' field has been set, false otherwise.
       */
     public boolean hasMDENTRYPX() {
-      return fieldSetFlags()[12];
+      return fieldSetFlags()[9];
     }
 
 
@@ -1177,7 +1088,7 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
       */
     public com.custom.informatica.fab.credittrading.fix.bgcgfi.Builder clearMDENTRYPX() {
       MDENTRYPX = null;
-      fieldSetFlags()[12] = false;
+      fieldSetFlags()[9] = false;
       return this;
     }
 
@@ -1196,9 +1107,9 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
       * @return This builder.
       */
     public com.custom.informatica.fab.credittrading.fix.bgcgfi.Builder setMDENTRYSIZE(java.lang.CharSequence value) {
-      validate(fields()[13], value);
+      validate(fields()[10], value);
       this.MDENTRYSIZE = value;
-      fieldSetFlags()[13] = true;
+      fieldSetFlags()[10] = true;
       return this;
     }
 
@@ -1207,7 +1118,7 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
       * @return True if the 'MDENTRYSIZE' field has been set, false otherwise.
       */
     public boolean hasMDENTRYSIZE() {
-      return fieldSetFlags()[13];
+      return fieldSetFlags()[10];
     }
 
 
@@ -1217,7 +1128,167 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
       */
     public com.custom.informatica.fab.credittrading.fix.bgcgfi.Builder clearMDENTRYSIZE() {
       MDENTRYSIZE = null;
+      fieldSetFlags()[10] = false;
+      return this;
+    }
+
+    /**
+      * Gets the value of the 'MDENTRYTYPE' field.
+      * @return The value.
+      */
+    public java.lang.CharSequence getMDENTRYTYPE() {
+      return MDENTRYTYPE;
+    }
+
+
+    /**
+      * Sets the value of the 'MDENTRYTYPE' field.
+      * @param value The value of 'MDENTRYTYPE'.
+      * @return This builder.
+      */
+    public com.custom.informatica.fab.credittrading.fix.bgcgfi.Builder setMDENTRYTYPE(java.lang.CharSequence value) {
+      validate(fields()[11], value);
+      this.MDENTRYTYPE = value;
+      fieldSetFlags()[11] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'MDENTRYTYPE' field has been set.
+      * @return True if the 'MDENTRYTYPE' field has been set, false otherwise.
+      */
+    public boolean hasMDENTRYTYPE() {
+      return fieldSetFlags()[11];
+    }
+
+
+    /**
+      * Clears the value of the 'MDENTRYTYPE' field.
+      * @return This builder.
+      */
+    public com.custom.informatica.fab.credittrading.fix.bgcgfi.Builder clearMDENTRYTYPE() {
+      MDENTRYTYPE = null;
+      fieldSetFlags()[11] = false;
+      return this;
+    }
+
+    /**
+      * Gets the value of the 'MDENTRYID' field.
+      * @return The value.
+      */
+    public java.lang.CharSequence getMDENTRYID() {
+      return MDENTRYID;
+    }
+
+
+    /**
+      * Sets the value of the 'MDENTRYID' field.
+      * @param value The value of 'MDENTRYID'.
+      * @return This builder.
+      */
+    public com.custom.informatica.fab.credittrading.fix.bgcgfi.Builder setMDENTRYID(java.lang.CharSequence value) {
+      validate(fields()[12], value);
+      this.MDENTRYID = value;
+      fieldSetFlags()[12] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'MDENTRYID' field has been set.
+      * @return True if the 'MDENTRYID' field has been set, false otherwise.
+      */
+    public boolean hasMDENTRYID() {
+      return fieldSetFlags()[12];
+    }
+
+
+    /**
+      * Clears the value of the 'MDENTRYID' field.
+      * @return This builder.
+      */
+    public com.custom.informatica.fab.credittrading.fix.bgcgfi.Builder clearMDENTRYID() {
+      MDENTRYID = null;
+      fieldSetFlags()[12] = false;
+      return this;
+    }
+
+    /**
+      * Gets the value of the 'TRADINGSESSIONID' field.
+      * @return The value.
+      */
+    public java.lang.CharSequence getTRADINGSESSIONID() {
+      return TRADINGSESSIONID;
+    }
+
+
+    /**
+      * Sets the value of the 'TRADINGSESSIONID' field.
+      * @param value The value of 'TRADINGSESSIONID'.
+      * @return This builder.
+      */
+    public com.custom.informatica.fab.credittrading.fix.bgcgfi.Builder setTRADINGSESSIONID(java.lang.CharSequence value) {
+      validate(fields()[13], value);
+      this.TRADINGSESSIONID = value;
+      fieldSetFlags()[13] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'TRADINGSESSIONID' field has been set.
+      * @return True if the 'TRADINGSESSIONID' field has been set, false otherwise.
+      */
+    public boolean hasTRADINGSESSIONID() {
+      return fieldSetFlags()[13];
+    }
+
+
+    /**
+      * Clears the value of the 'TRADINGSESSIONID' field.
+      * @return This builder.
+      */
+    public com.custom.informatica.fab.credittrading.fix.bgcgfi.Builder clearTRADINGSESSIONID() {
+      TRADINGSESSIONID = null;
       fieldSetFlags()[13] = false;
+      return this;
+    }
+
+    /**
+      * Gets the value of the 'ORDERID' field.
+      * @return The value.
+      */
+    public java.lang.CharSequence getORDERID() {
+      return ORDERID;
+    }
+
+
+    /**
+      * Sets the value of the 'ORDERID' field.
+      * @param value The value of 'ORDERID'.
+      * @return This builder.
+      */
+    public com.custom.informatica.fab.credittrading.fix.bgcgfi.Builder setORDERID(java.lang.CharSequence value) {
+      validate(fields()[14], value);
+      this.ORDERID = value;
+      fieldSetFlags()[14] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'ORDERID' field has been set.
+      * @return True if the 'ORDERID' field has been set, false otherwise.
+      */
+    public boolean hasORDERID() {
+      return fieldSetFlags()[14];
+    }
+
+
+    /**
+      * Clears the value of the 'ORDERID' field.
+      * @return This builder.
+      */
+    public com.custom.informatica.fab.credittrading.fix.bgcgfi.Builder clearORDERID() {
+      ORDERID = null;
+      fieldSetFlags()[14] = false;
       return this;
     }
 
@@ -1236,9 +1307,9 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
       * @return This builder.
       */
     public com.custom.informatica.fab.credittrading.fix.bgcgfi.Builder setMDENTRYDATE(java.lang.CharSequence value) {
-      validate(fields()[14], value);
+      validate(fields()[15], value);
       this.MDENTRYDATE = value;
-      fieldSetFlags()[14] = true;
+      fieldSetFlags()[15] = true;
       return this;
     }
 
@@ -1247,7 +1318,7 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
       * @return True if the 'MDENTRYDATE' field has been set, false otherwise.
       */
     public boolean hasMDENTRYDATE() {
-      return fieldSetFlags()[14];
+      return fieldSetFlags()[15];
     }
 
 
@@ -1257,7 +1328,7 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
       */
     public com.custom.informatica.fab.credittrading.fix.bgcgfi.Builder clearMDENTRYDATE() {
       MDENTRYDATE = null;
-      fieldSetFlags()[14] = false;
+      fieldSetFlags()[15] = false;
       return this;
     }
 
@@ -1276,9 +1347,9 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
       * @return This builder.
       */
     public com.custom.informatica.fab.credittrading.fix.bgcgfi.Builder setMDENTRYTIME(java.lang.CharSequence value) {
-      validate(fields()[15], value);
+      validate(fields()[16], value);
       this.MDENTRYTIME = value;
-      fieldSetFlags()[15] = true;
+      fieldSetFlags()[16] = true;
       return this;
     }
 
@@ -1287,7 +1358,7 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
       * @return True if the 'MDENTRYTIME' field has been set, false otherwise.
       */
     public boolean hasMDENTRYTIME() {
-      return fieldSetFlags()[15];
+      return fieldSetFlags()[16];
     }
 
 
@@ -1297,7 +1368,7 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
       */
     public com.custom.informatica.fab.credittrading.fix.bgcgfi.Builder clearMDENTRYTIME() {
       MDENTRYTIME = null;
-      fieldSetFlags()[15] = false;
+      fieldSetFlags()[16] = false;
       return this;
     }
 
@@ -1314,14 +1385,15 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
         record.MDREQID = fieldSetFlags()[5] ? this.MDREQID : (java.lang.CharSequence) defaultValue(fields()[5]);
         record.MDUPDATEACTION = fieldSetFlags()[6] ? this.MDUPDATEACTION : (java.lang.CharSequence) defaultValue(fields()[6]);
         record.FULLSYMBOL = fieldSetFlags()[7] ? this.FULLSYMBOL : (java.lang.CharSequence) defaultValue(fields()[7]);
-        record.TYPEOFINSTRUMENT = fieldSetFlags()[8] ? this.TYPEOFINSTRUMENT : (java.lang.CharSequence) defaultValue(fields()[8]);
-        record.QUOTATIONMETHOD = fieldSetFlags()[9] ? this.QUOTATIONMETHOD : (java.lang.CharSequence) defaultValue(fields()[9]);
-        record.ISIN = fieldSetFlags()[10] ? this.ISIN : (java.lang.CharSequence) defaultValue(fields()[10]);
-        record.REFPRICEQUITEDTYPE = fieldSetFlags()[11] ? this.REFPRICEQUITEDTYPE : (java.lang.CharSequence) defaultValue(fields()[11]);
-        record.MDENTRYPX = fieldSetFlags()[12] ? this.MDENTRYPX : (java.lang.Integer) defaultValue(fields()[12]);
-        record.MDENTRYSIZE = fieldSetFlags()[13] ? this.MDENTRYSIZE : (java.lang.CharSequence) defaultValue(fields()[13]);
-        record.MDENTRYDATE = fieldSetFlags()[14] ? this.MDENTRYDATE : (java.lang.CharSequence) defaultValue(fields()[14]);
-        record.MDENTRYTIME = fieldSetFlags()[15] ? this.MDENTRYTIME : (java.lang.CharSequence) defaultValue(fields()[15]);
+        record.ISIN = fieldSetFlags()[8] ? this.ISIN : (java.lang.CharSequence) defaultValue(fields()[8]);
+        record.MDENTRYPX = fieldSetFlags()[9] ? this.MDENTRYPX : (java.lang.Integer) defaultValue(fields()[9]);
+        record.MDENTRYSIZE = fieldSetFlags()[10] ? this.MDENTRYSIZE : (java.lang.CharSequence) defaultValue(fields()[10]);
+        record.MDENTRYTYPE = fieldSetFlags()[11] ? this.MDENTRYTYPE : (java.lang.CharSequence) defaultValue(fields()[11]);
+        record.MDENTRYID = fieldSetFlags()[12] ? this.MDENTRYID : (java.lang.CharSequence) defaultValue(fields()[12]);
+        record.TRADINGSESSIONID = fieldSetFlags()[13] ? this.TRADINGSESSIONID : (java.lang.CharSequence) defaultValue(fields()[13]);
+        record.ORDERID = fieldSetFlags()[14] ? this.ORDERID : (java.lang.CharSequence) defaultValue(fields()[14]);
+        record.MDENTRYDATE = fieldSetFlags()[15] ? this.MDENTRYDATE : (java.lang.CharSequence) defaultValue(fields()[15]);
+        record.MDENTRYTIME = fieldSetFlags()[16] ? this.MDENTRYTIME : (java.lang.CharSequence) defaultValue(fields()[16]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;
@@ -1418,36 +1490,12 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
       out.writeString(this.FULLSYMBOL);
     }
 
-    if (this.TYPEOFINSTRUMENT == null) {
-      out.writeIndex(1);
-      out.writeNull();
-    } else {
-      out.writeIndex(0);
-      out.writeString(this.TYPEOFINSTRUMENT);
-    }
-
-    if (this.QUOTATIONMETHOD == null) {
-      out.writeIndex(1);
-      out.writeNull();
-    } else {
-      out.writeIndex(0);
-      out.writeString(this.QUOTATIONMETHOD);
-    }
-
     if (this.ISIN == null) {
       out.writeIndex(1);
       out.writeNull();
     } else {
       out.writeIndex(0);
       out.writeString(this.ISIN);
-    }
-
-    if (this.REFPRICEQUITEDTYPE == null) {
-      out.writeIndex(1);
-      out.writeNull();
-    } else {
-      out.writeIndex(0);
-      out.writeString(this.REFPRICEQUITEDTYPE);
     }
 
     if (this.MDENTRYPX == null) {
@@ -1464,6 +1512,38 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
     } else {
       out.writeIndex(0);
       out.writeString(this.MDENTRYSIZE);
+    }
+
+    if (this.MDENTRYTYPE == null) {
+      out.writeIndex(1);
+      out.writeNull();
+    } else {
+      out.writeIndex(0);
+      out.writeString(this.MDENTRYTYPE);
+    }
+
+    if (this.MDENTRYID == null) {
+      out.writeIndex(1);
+      out.writeNull();
+    } else {
+      out.writeIndex(0);
+      out.writeString(this.MDENTRYID);
+    }
+
+    if (this.TRADINGSESSIONID == null) {
+      out.writeIndex(1);
+      out.writeNull();
+    } else {
+      out.writeIndex(0);
+      out.writeString(this.TRADINGSESSIONID);
+    }
+
+    if (this.ORDERID == null) {
+      out.writeIndex(1);
+      out.writeNull();
+    } else {
+      out.writeIndex(0);
+      out.writeString(this.ORDERID);
     }
 
     if (this.MDENTRYDATE == null) {
@@ -1547,30 +1627,9 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
 
       if (in.readIndex() != 0) {
         in.readNull();
-        this.TYPEOFINSTRUMENT = null;
-      } else {
-        this.TYPEOFINSTRUMENT = in.readString(this.TYPEOFINSTRUMENT instanceof Utf8 ? (Utf8)this.TYPEOFINSTRUMENT : null);
-      }
-
-      if (in.readIndex() != 0) {
-        in.readNull();
-        this.QUOTATIONMETHOD = null;
-      } else {
-        this.QUOTATIONMETHOD = in.readString(this.QUOTATIONMETHOD instanceof Utf8 ? (Utf8)this.QUOTATIONMETHOD : null);
-      }
-
-      if (in.readIndex() != 0) {
-        in.readNull();
         this.ISIN = null;
       } else {
         this.ISIN = in.readString(this.ISIN instanceof Utf8 ? (Utf8)this.ISIN : null);
-      }
-
-      if (in.readIndex() != 0) {
-        in.readNull();
-        this.REFPRICEQUITEDTYPE = null;
-      } else {
-        this.REFPRICEQUITEDTYPE = in.readString(this.REFPRICEQUITEDTYPE instanceof Utf8 ? (Utf8)this.REFPRICEQUITEDTYPE : null);
       }
 
       if (in.readIndex() != 0) {
@@ -1589,6 +1648,34 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
 
       if (in.readIndex() != 0) {
         in.readNull();
+        this.MDENTRYTYPE = null;
+      } else {
+        this.MDENTRYTYPE = in.readString(this.MDENTRYTYPE instanceof Utf8 ? (Utf8)this.MDENTRYTYPE : null);
+      }
+
+      if (in.readIndex() != 0) {
+        in.readNull();
+        this.MDENTRYID = null;
+      } else {
+        this.MDENTRYID = in.readString(this.MDENTRYID instanceof Utf8 ? (Utf8)this.MDENTRYID : null);
+      }
+
+      if (in.readIndex() != 0) {
+        in.readNull();
+        this.TRADINGSESSIONID = null;
+      } else {
+        this.TRADINGSESSIONID = in.readString(this.TRADINGSESSIONID instanceof Utf8 ? (Utf8)this.TRADINGSESSIONID : null);
+      }
+
+      if (in.readIndex() != 0) {
+        in.readNull();
+        this.ORDERID = null;
+      } else {
+        this.ORDERID = in.readString(this.ORDERID instanceof Utf8 ? (Utf8)this.ORDERID : null);
+      }
+
+      if (in.readIndex() != 0) {
+        in.readNull();
         this.MDENTRYDATE = null;
       } else {
         this.MDENTRYDATE = in.readString(this.MDENTRYDATE instanceof Utf8 ? (Utf8)this.MDENTRYDATE : null);
@@ -1602,7 +1689,7 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
       }
 
     } else {
-      for (int i = 0; i < 16; i++) {
+      for (int i = 0; i < 17; i++) {
         switch (fieldOrder[i].pos()) {
         case 0:
           if (in.readIndex() != 0) {
@@ -1679,40 +1766,13 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
         case 8:
           if (in.readIndex() != 0) {
             in.readNull();
-            this.TYPEOFINSTRUMENT = null;
-          } else {
-            this.TYPEOFINSTRUMENT = in.readString(this.TYPEOFINSTRUMENT instanceof Utf8 ? (Utf8)this.TYPEOFINSTRUMENT : null);
-          }
-          break;
-
-        case 9:
-          if (in.readIndex() != 0) {
-            in.readNull();
-            this.QUOTATIONMETHOD = null;
-          } else {
-            this.QUOTATIONMETHOD = in.readString(this.QUOTATIONMETHOD instanceof Utf8 ? (Utf8)this.QUOTATIONMETHOD : null);
-          }
-          break;
-
-        case 10:
-          if (in.readIndex() != 0) {
-            in.readNull();
             this.ISIN = null;
           } else {
             this.ISIN = in.readString(this.ISIN instanceof Utf8 ? (Utf8)this.ISIN : null);
           }
           break;
 
-        case 11:
-          if (in.readIndex() != 0) {
-            in.readNull();
-            this.REFPRICEQUITEDTYPE = null;
-          } else {
-            this.REFPRICEQUITEDTYPE = in.readString(this.REFPRICEQUITEDTYPE instanceof Utf8 ? (Utf8)this.REFPRICEQUITEDTYPE : null);
-          }
-          break;
-
-        case 12:
+        case 9:
           if (in.readIndex() != 0) {
             in.readNull();
             this.MDENTRYPX = null;
@@ -1721,7 +1781,7 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
           }
           break;
 
-        case 13:
+        case 10:
           if (in.readIndex() != 0) {
             in.readNull();
             this.MDENTRYSIZE = null;
@@ -1730,7 +1790,43 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
           }
           break;
 
+        case 11:
+          if (in.readIndex() != 0) {
+            in.readNull();
+            this.MDENTRYTYPE = null;
+          } else {
+            this.MDENTRYTYPE = in.readString(this.MDENTRYTYPE instanceof Utf8 ? (Utf8)this.MDENTRYTYPE : null);
+          }
+          break;
+
+        case 12:
+          if (in.readIndex() != 0) {
+            in.readNull();
+            this.MDENTRYID = null;
+          } else {
+            this.MDENTRYID = in.readString(this.MDENTRYID instanceof Utf8 ? (Utf8)this.MDENTRYID : null);
+          }
+          break;
+
+        case 13:
+          if (in.readIndex() != 0) {
+            in.readNull();
+            this.TRADINGSESSIONID = null;
+          } else {
+            this.TRADINGSESSIONID = in.readString(this.TRADINGSESSIONID instanceof Utf8 ? (Utf8)this.TRADINGSESSIONID : null);
+          }
+          break;
+
         case 14:
+          if (in.readIndex() != 0) {
+            in.readNull();
+            this.ORDERID = null;
+          } else {
+            this.ORDERID = in.readString(this.ORDERID instanceof Utf8 ? (Utf8)this.ORDERID : null);
+          }
+          break;
+
+        case 15:
           if (in.readIndex() != 0) {
             in.readNull();
             this.MDENTRYDATE = null;
@@ -1739,7 +1835,7 @@ public class bgcgfi extends org.apache.avro.specific.SpecificRecordBase implemen
           }
           break;
 
-        case 15:
+        case 16:
           if (in.readIndex() != 0) {
             in.readNull();
             this.MDENTRYTIME = null;

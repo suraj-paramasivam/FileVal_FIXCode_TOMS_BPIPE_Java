@@ -16,5 +16,16 @@
     <orderEntry type="library" name="avro" level="application" />
     <orderEntry type="library" name="kafka-clients-2.1.0" level="application" />
     <orderEntry type="library" name="avro-tools-1.10.0" level="application" />
+    <orderEntry type="library" name="java-sdk-1.0.1" level="application" />
+    <orderEntry type="library" name="jersey-media-json-jackson-3.0.0-M6" level="application" />
+    <orderEntry type="library" name="jersey-media-sse-3.0.0-M6" level="application" />
+    <orderEntry type="library" name="javax.ws.rs-api-2.1.1" level="application" />
+    <orderEntry type="library" name="guava-29.0-jre" level="application" />
+    <orderEntry type="library" name="jjwt-0.9.1" level="application" />
+    <orderEntry type="library" name="jersey-client-3.0.0-M6" level="application" />
+    <orderEntry type="library" name="jakarta.ws.rs-api-3.0.0-M1" level="application" />
+    <orderEntry type="library" name="json-20190722" level="application" />
+    <orderEntry type="library" name="json-simple-1.1.1" level="application" />
+    <orderEntry type="library" name="blpapi3" level="application" />
   </component>
 </module>

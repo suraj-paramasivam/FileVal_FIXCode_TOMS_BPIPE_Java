@@ -1,0 +1,105 @@
+2020-10-20 20:28:54,427 INFO [com.custom.informatica.fab.credittrading.toms.TomsAll] - using proxy host: 10.163.0.84 and proxy port; 8080
+2020-10-20 20:28:54,428 DEBUG [com.custom.informatica.fab.credittrading.toms.TomsAll] - The arguments passed to this program are : 
+credentials/credential_toms.txt******** - Password
+THendpoint: EUROBOND
+ hostname: https://beta.api.bloomberg.com
+from_date: 2020-9-01T00:00:00
+ to_date: 2020-9-21T00:05:00
+2020-10-20 20:28:56,016 DEBUG [com.custom.informatica.fab.credittrading.common.EncryptFilewithPass] - Encoded version of key:  [B@26f67b76
+2020-10-20 20:28:56,021 INFO [com.custom.informatica.fab.credittrading.common.EncryptFilewithPass] - Using PBEwithMD5andDES to encrypt
+2020-10-20 20:28:56,057 DEBUG [com.custom.informatica.fab.credittrading.common.EncryptFilewithPass] - Setting Decrypt Mode
+2020-10-20 20:28:56,066 INFO [com.custom.informatica.fab.credittrading.common.EncryptFilewithPass] - Created decrypted file
+2020-10-20 20:28:56,069 INFO [com.custom.informatica.fab.credittrading.toms.TomsAll] - File decrypted
+2020-10-20 20:28:56,072 INFO [com.custom.informatica.fab.credittrading.toms.TomsAll] - Credentials Loaded
+2020-10-20 20:28:56,097 DEBUG [com.custom.informatica.fab.credittrading.toms.TomsAll] - ClientID is 5484a6b19790220c285982fb7e5675d7
+2020-10-20 20:28:56,099 DEBUG [com.custom.informatica.fab.credittrading.toms.TomsAll] - Secret is : fbbd6baa3e1347334bfd31cf21db5f7a560f32b0c70e502f632a048e5dec05bb
+2020-10-20 20:28:56,102 DEBUG [com.custom.informatica.fab.credittrading.toms.TomsAll] - Decrypted file deleted successfully
+2020-10-20 20:28:56,104 DEBUG [com.custom.informatica.fab.credittrading.toms.TomsAll] - The parameters fetched from the properties file are px_num: 4143
+TradeHistoryFileName: null
+PositionsFileName: null
+2020-10-20 20:28:56,104 DEBUG [com.custom.informatica.fab.credittrading.toms.TomsAll] - The parameters fetched from the properties file are px_num: 4143
+TradeHistoryFileName: null
+PositionsFileName: null
+2020-10-20 20:28:56,105 DEBUG [com.custom.informatica.fab.credittrading.toms.TomsAll] - The parameters fetched from the properties file are px_num: 4143
+TradeHistoryFileName: trade_history.json
+PositionsFileName: null
+2020-10-20 20:28:56,105 DEBUG [com.custom.informatica.fab.credittrading.toms.TomsAll] - The parameters fetched from the properties file are px_num: 4143
+TradeHistoryFileName: trade_history.json
+PositionsFileName: positions.json
+2020-10-20 20:28:56,105 DEBUG [com.custom.informatica.fab.credittrading.toms.TomsAll] - The parameters fetched from the properties file are px_num: 4143
+TradeHistoryFileName: trade_history.json
+PositionsFileName: positions.json
+2020-10-20 20:28:56,106 DEBUG [com.custom.informatica.fab.credittrading.toms.TomsAll] - Access Token get completed
+2020-10-20 20:28:56,156 INFO [com.custom.informatica.fab.credittrading.toms.TomsAll] - Using flow parametes  hostname:https://beta.api.bloomberg.com client id:5484a6b19790220c285982fb7e5675d7 access token: RDJNUXNJMCtDWklNMGRaNmgxdkJaZVNNUGkvMEtuQ1Z1aWFkRFIwVHd4YkVhU1hWUjI5djR3MXp3R2R3cmlpc1lYSzRwZ1dqOThiWmFuTXRtT2VkR3c9PQ refresh token: NzFkYjkxNjcwOGVlMjNjMjc1MjI5N2IwM2VjYTg4NWUzZmUyYTE0YzJiYmQ2MmRiZWViNzNhOTI2NWU3NDlkZQ id token: eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2JhdXRoLmJsb29tYmVyZy5jb20iLCJzdWIiOiJ0c3RlcmdpYW5vczIiLCJhdWQiOiI1NDg0YTZiMTk3OTAyMjBjMjg1OTgyZmI3ZTU2NzVkNyIsImV4cCI6MTYwMTg5NDIwMTA2NiwiaWF0IjoxNjAxMjAzMDI4MzA0LCJhdXRoX3RpbWUiOjE2MDEyMDMwMDEwNjYsIm5vbmNlIjoiNmZjNTQxMDEtMTExZC00OTgzLTg3NTAtYjk1MDg5NmM5OWNmIiwiYXRfaGFzaCI6InJfb0Y3T0NFWXc5dVU1UmtKanpPVGZxc1V3TlNkbWJXZmNFd3N0dkdFOWE3IiwidXVpZCI6MTA4MDYzMDh9.DHMt7BXSoEeJ06yM29bWP_azzLM726kZB31I1-7Gbb4
+2020-10-20 20:28:57,161 DEBUG [com.custom.informatica.fab.credittrading.toms.TomsAll] - Token File picked up
+2020-10-20 20:28:57,162 INFO [com.custom.informatica.fab.credittrading.toms.TomsAll] - Time since last refresh is more than 1 hour, sending refresh request to BBG
+2020-10-20 20:39:22,705 INFO [com.custom.informatica.fab.credittrading.toms.TomsAll] - using proxy host: 10.163.0.84 and proxy port; 8080
+2020-10-20 20:39:22,706 DEBUG [com.custom.informatica.fab.credittrading.toms.TomsAll] - The arguments passed to this program are : 
+credentials/credential_toms.txt******** - Password
+THendpoint: EUROBOND
+ hostname: https://beta.api.bloomberg.com
+from_date: 2020-9-01T00:00:00
+ to_date: 2020-9-21T00:05:00
+2020-10-20 20:39:24,135 DEBUG [com.custom.informatica.fab.credittrading.common.EncryptFilewithPass] - Encoded version of key:  [B@69d9c55
+2020-10-20 20:39:24,137 INFO [com.custom.informatica.fab.credittrading.common.EncryptFilewithPass] - Using PBEwithMD5andDES to encrypt
+2020-10-20 20:39:24,154 DEBUG [com.custom.informatica.fab.credittrading.common.EncryptFilewithPass] - Setting Decrypt Mode
+2020-10-20 20:39:24,159 INFO [com.custom.informatica.fab.credittrading.common.EncryptFilewithPass] - Created decrypted file
+2020-10-20 20:39:24,160 INFO [com.custom.informatica.fab.credittrading.toms.TomsAll] - File decrypted
+2020-10-20 20:39:24,161 INFO [com.custom.informatica.fab.credittrading.toms.TomsAll] - Credentials Loaded
+2020-10-20 20:39:24,173 DEBUG [com.custom.informatica.fab.credittrading.toms.TomsAll] - ClientID is 5484a6b19790220c285982fb7e5675d7
+2020-10-20 20:39:24,174 DEBUG [com.custom.informatica.fab.credittrading.toms.TomsAll] - Secret is : fbbd6baa3e1347334bfd31cf21db5f7a560f32b0c70e502f632a048e5dec05bb
+2020-10-20 20:39:24,197 DEBUG [com.custom.informatica.fab.credittrading.toms.TomsAll] - Decrypted file deleted successfully
+2020-10-20 20:39:24,198 DEBUG [com.custom.informatica.fab.credittrading.toms.TomsAll] - The parameters fetched from the properties file are px_num: 4143
+TradeHistoryFileName: null
+PositionsFileName: null
+2020-10-20 20:39:24,198 DEBUG [com.custom.informatica.fab.credittrading.toms.TomsAll] - The parameters fetched from the properties file are px_num: 4143
+TradeHistoryFileName: null
+PositionsFileName: null
+2020-10-20 20:39:24,198 DEBUG [com.custom.informatica.fab.credittrading.toms.TomsAll] - The parameters fetched from the properties file are px_num: 4143
+TradeHistoryFileName: trade_history.json
+PositionsFileName: null
+2020-10-20 20:39:24,198 DEBUG [com.custom.informatica.fab.credittrading.toms.TomsAll] - The parameters fetched from the properties file are px_num: 4143
+TradeHistoryFileName: trade_history.json
+PositionsFileName: positions.json
+2020-10-20 20:39:24,199 DEBUG [com.custom.informatica.fab.credittrading.toms.TomsAll] - The parameters fetched from the properties file are px_num: 4143
+TradeHistoryFileName: trade_history.json
+PositionsFileName: positions.json
+2020-10-20 20:39:24,199 DEBUG [com.custom.informatica.fab.credittrading.toms.TomsAll] - Access Token get completed
+2020-10-20 20:39:24,228 INFO [com.custom.informatica.fab.credittrading.toms.TomsAll] - Using flow parametes  hostname:https://beta.api.bloomberg.com client id:5484a6b19790220c285982fb7e5675d7 access token: RDJNUXNJMCtDWklNMGRaNmgxdkJaZVNNUGkvMEtuQ1Z1aWFkRFIwVHd4YkVhU1hWUjI5djR3MXp3R2R3cmlpc1lYSzRwZ1dqOThiWmFuTXRtT2VkR3c9PQ refresh token: NzFkYjkxNjcwOGVlMjNjMjc1MjI5N2IwM2VjYTg4NWUzZmUyYTE0YzJiYmQ2MmRiZWViNzNhOTI2NWU3NDlkZQ id token: eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2JhdXRoLmJsb29tYmVyZy5jb20iLCJzdWIiOiJ0c3RlcmdpYW5vczIiLCJhdWQiOiI1NDg0YTZiMTk3OTAyMjBjMjg1OTgyZmI3ZTU2NzVkNyIsImV4cCI6MTYwMTg5NDIwMTA2NiwiaWF0IjoxNjAxMjAzMDI4MzA0LCJhdXRoX3RpbWUiOjE2MDEyMDMwMDEwNjYsIm5vbmNlIjoiNmZjNTQxMDEtMTExZC00OTgzLTg3NTAtYjk1MDg5NmM5OWNmIiwiYXRfaGFzaCI6InJfb0Y3T0NFWXc5dVU1UmtKanpPVGZxc1V3TlNkbWJXZmNFd3N0dkdFOWE3IiwidXVpZCI6MTA4MDYzMDh9.DHMt7BXSoEeJ06yM29bWP_azzLM726kZB31I1-7Gbb4
+2020-10-20 20:39:25,290 DEBUG [com.custom.informatica.fab.credittrading.toms.TomsAll] - Token File picked up
+2020-10-20 20:39:25,291 INFO [com.custom.informatica.fab.credittrading.toms.TomsAll] - Time since last refresh is more than 1 hour, sending refresh request to BBG
+2020-10-21 16:13:44,199 INFO [com.custom.informatica.fab.credittrading.toms.TomsAll] - using proxy host: 10.163.0.84 and proxy port; 8080
+2020-10-21 16:13:44,199 DEBUG [com.custom.informatica.fab.credittrading.toms.TomsAll] - The arguments passed to this program are : 
+credentials/credential_toms.txt******** - Password
+THendpoint: EUROBOND
+ hostname: https://beta.api.bloomberg.com
+from_date: 2020-9-01T00:00:00
+ to_date: 2020-9-21T00:05:00
+2020-10-21 16:13:44,975 DEBUG [com.custom.informatica.fab.credittrading.common.EncryptFilewithPass] - Encoded version of key:  [B@78aab498
+2020-10-21 16:13:44,977 INFO [com.custom.informatica.fab.credittrading.common.EncryptFilewithPass] - Using PBEwithMD5andDES to encrypt
+2020-10-21 16:13:44,990 DEBUG [com.custom.informatica.fab.credittrading.common.EncryptFilewithPass] - Setting Decrypt Mode
+2020-10-21 16:13:44,993 INFO [com.custom.informatica.fab.credittrading.common.EncryptFilewithPass] - Created decrypted file
+2020-10-21 16:13:44,993 INFO [com.custom.informatica.fab.credittrading.toms.TomsAll] - File decrypted
+2020-10-21 16:13:44,994 INFO [com.custom.informatica.fab.credittrading.toms.TomsAll] - Credentials Loaded
+2020-10-21 16:13:45,003 DEBUG [com.custom.informatica.fab.credittrading.toms.TomsAll] - ClientID is 5484a6b19790220c285982fb7e5675d7
+2020-10-21 16:13:45,004 DEBUG [com.custom.informatica.fab.credittrading.toms.TomsAll] - Secret is : fbbd6baa3e1347334bfd31cf21db5f7a560f32b0c70e502f632a048e5dec05bb
+2020-10-21 16:13:45,005 DEBUG [com.custom.informatica.fab.credittrading.toms.TomsAll] - Decrypted file deleted successfully
+2020-10-21 16:13:45,005 DEBUG [com.custom.informatica.fab.credittrading.toms.TomsAll] - The parameters fetched from the properties file are px_num: 4143
+TradeHistoryFileName: null
+PositionsFileName: null
+2020-10-21 16:13:45,005 DEBUG [com.custom.informatica.fab.credittrading.toms.TomsAll] - The parameters fetched from the properties file are px_num: 4143
+TradeHistoryFileName: null
+PositionsFileName: null
+2020-10-21 16:13:45,005 DEBUG [com.custom.informatica.fab.credittrading.toms.TomsAll] - The parameters fetched from the properties file are px_num: 4143
+TradeHistoryFileName: trade_history.json
+PositionsFileName: null
+2020-10-21 16:13:45,005 DEBUG [com.custom.informatica.fab.credittrading.toms.TomsAll] - The parameters fetched from the properties file are px_num: 4143
+TradeHistoryFileName: trade_history.json
+PositionsFileName: positions.json
+2020-10-21 16:13:45,005 DEBUG [com.custom.informatica.fab.credittrading.toms.TomsAll] - The parameters fetched from the properties file are px_num: 4143
+TradeHistoryFileName: trade_history.json
+PositionsFileName: positions.json
+2020-10-21 16:13:45,006 DEBUG [com.custom.informatica.fab.credittrading.toms.TomsAll] - Access Token get completed
+2020-10-21 16:13:45,027 INFO [com.custom.informatica.fab.credittrading.toms.TomsAll] - Using flow parametes  hostname:https://beta.api.bloomberg.com client id:5484a6b19790220c285982fb7e5675d7 access token: RDJNUXNJMCtDWklNMGRaNmgxdkJaZVNNUGkvMEtuQ1Z1aWFkRFIwVHd4YkVhU1hWUjI5djR3MXp3R2R3cmlpc1lYSzRwZ1dqOThiWmFuTXRtT2VkR3c9PQ refresh token: NzFkYjkxNjcwOGVlMjNjMjc1MjI5N2IwM2VjYTg4NWUzZmUyYTE0YzJiYmQ2MmRiZWViNzNhOTI2NWU3NDlkZQ id token: eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2JhdXRoLmJsb29tYmVyZy5jb20iLCJzdWIiOiJ0c3RlcmdpYW5vczIiLCJhdWQiOiI1NDg0YTZiMTk3OTAyMjBjMjg1OTgyZmI3ZTU2NzVkNyIsImV4cCI6MTYwMTg5NDIwMTA2NiwiaWF0IjoxNjAxMjAzMDI4MzA0LCJhdXRoX3RpbWUiOjE2MDEyMDMwMDEwNjYsIm5vbmNlIjoiNmZjNTQxMDEtMTExZC00OTgzLTg3NTAtYjk1MDg5NmM5OWNmIiwiYXRfaGFzaCI6InJfb0Y3T0NFWXc5dVU1UmtKanpPVGZxc1V3TlNkbWJXZmNFd3N0dkdFOWE3IiwidXVpZCI6MTA4MDYzMDh9.DHMt7BXSoEeJ06yM29bWP_azzLM726kZB31I1-7Gbb4
+2020-10-21 16:13:45,556 DEBUG [com.custom.informatica.fab.credittrading.toms.TomsAll] - Token File picked up
+2020-10-21 16:13:45,556 INFO [com.custom.informatica.fab.credittrading.toms.TomsAll] - Time since last refresh is more than 1 hour, sending refresh request to BBG
